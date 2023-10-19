@@ -7,3 +7,4 @@ joblib
 datetime
 matplotlib
 scikit-learn
+sklearn
