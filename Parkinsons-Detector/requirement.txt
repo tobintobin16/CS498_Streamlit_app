@@ -1,8 +1,9 @@
-streamlit
-streamlit_option_menu
 sqlite3
 numpy
 pandas
 joblib
 datetime
 scikit-learn
+sklearn
+streamlit
+streamlit_option_menu
