@@ -5,4 +5,5 @@ numpy
 pandas
 joblib
 datetime
+matplotlib
 scikit-learn
