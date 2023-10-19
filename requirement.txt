@@ -5,4 +5,4 @@ numpy
 pandas
 joblib
 datetime
-sklearn
+scikit-learn
