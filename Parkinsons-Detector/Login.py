@@ -8,7 +8,7 @@ def creds_entered():
     adminname = st.session_state['aduser'].strip()
     adminpass = st.session_state['adpasswd'].strip()
     user_check = ('select * from admin where username = ? and password = ?')
-    c.execute(user_check, [(adminname),(adminpass)])
+    c.execute(user_check, [str(adminname),str(adminpass)])
     result = c.fetchall()
 
     return result is not None
