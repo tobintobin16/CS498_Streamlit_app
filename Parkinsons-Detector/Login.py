@@ -1,14 +1,17 @@
 import streamlit as st
 import sqlite3
+import os.path
 
 
 def creds_entered():
-    with sqlite3.connect("Parkinsons-Detector/pakinson_admin.sqlite3") as db:
+    bdir = os.path.dirname(os.path.abspath(__file__))
+    dbpath = os.path.join(bdir, "pakinson_admin.sqlite3")
+    with sqlite3.connect(dbpath) as db:
         c = db.cursor()
     adminname = st.session_state['aduser'].strip()
     adminpass = st.session_state['adpasswd'].strip()
     user_check = ('select * from admin where username = ? and password = ?')
-    c.execute(user_check, [str(adminname),str(adminpass)])
+    c.execute(user_check, [(adminname),(adminpass)])
     result = c.fetchall()
 
     return result is not None
