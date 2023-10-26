@@ -5,7 +5,7 @@ import os.path
 
 def creds_entered():
     bdir = os.path.dirname(os.path.abspath(__file__))
-    dbpath = os.path.join(bdir, "pakinson_admin.sqlite3")
+    dbpath = os.path.join(bdir, "Parkinsons-Detector/parkinson_admin.sqlite3")
     with sqlite3.connect(dbpath) as db:
         c = db.cursor()
     adminname = st.session_state['aduser'].strip()
